@@ -1,0 +1,79 @@
+/* Basic reset */
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  min-height: 100vh;
+  width: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.container {
+  display: relative;
+}
+.container,
+.board {
+  display: flex;
+  height: 100%;
+}
+
+.container h2 {
+  font-size: 16px;
+  margin: 1em;
+}
+
+.container .board > div {
+  display: flex;
+  flex-direction: column;
+  border: 1px dotted #eee;
+}
+
+.container .side-panel {
+  position: absolute;
+  right: -200px;
+}
+
+.container .side-panel.visible {
+  right: 0;
+}
+
+.container .add {
+  margin: 1em 2em;
+}
+
+.container .task {
+  border: 1px solid #eee;
+}
+
+.container .task.dragging {
+  opacity: 0.1;
+}
+
+.container .task .tname {
+  text-align: right;
+}
